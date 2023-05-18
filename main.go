@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gethelmyaml/basefunc"
+	"get-helm-yaml/basefunc"
 	"log"
 	"os"
 )
