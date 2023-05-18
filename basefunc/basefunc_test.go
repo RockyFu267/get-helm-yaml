@@ -53,6 +53,27 @@ func Test_GetReleaseConfig(t *testing.T) {
 
 }
 
+func Test_GetReleaseConfigWithOutValue(t *testing.T) {
+	resTmp01, err := GetALLRelease()
+	if err != nil {
+		log.Println(err)
+		return
+	}
+
+	resTmp02 := GetReleaseList(resTmp01)
+	res, err := GetReleaseConfigWithOutValue(resTmp02[0])
+	if err != nil {
+		log.Println(err)
+		return
+	}
+	// fmt.Println(res)
+	var str string
+	for _, v := range res {
+		str = str + "\n" + v
+	}
+	fmt.Println(str)
+
+}
 func Test_GetALLReleaseALL(t *testing.T) {
 	resTmp01, err := GetALLRelease()
 	if err != nil {
