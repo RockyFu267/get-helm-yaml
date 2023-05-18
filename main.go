@@ -27,7 +27,7 @@ func main() {
 
 	resList := basefunc.GetReleaseList(resTmp)
 
-	resAll, err := basefunc.GetALLReleaseALL(resList)
+	resAll, err := basefunc.GetALLReleaseALLWithOutValue(resList)
 	if err != nil {
 		log.Println(err)
 		return
